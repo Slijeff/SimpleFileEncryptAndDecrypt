@@ -5,6 +5,7 @@ import java.io.IOException;
 
 /**
  * This is the class that encrypt/decrypts the file
+ *
  * @author Jeffrey
  */
 public class FileUtil {
@@ -13,6 +14,7 @@ public class FileUtil {
 
   /**
    * Constructor that takes in a File object
+   *
    * @param file
    */
   public FileUtil(File file) {
@@ -21,6 +23,7 @@ public class FileUtil {
 
   /**
    * Constructor that takes a path
+   *
    * @param path
    */
   public FileUtil(String path) {
@@ -29,6 +32,7 @@ public class FileUtil {
 
   /**
    * Util that converts any file to a byte array
+   *
    * @return a byte array representation of the file
    * @throws IOException
    */
@@ -42,9 +46,10 @@ public class FileUtil {
 
   /**
    * Encrypt the given byte array using specifications in another class
-   * @param bytes the given byte array
+   *
+   * @param bytes  the given byte array
    * @param crypto the crypto method specified
-   * @param key a password
+   * @param key    a password
    * @throws Exception
    */
   public void encrypt(byte[] bytes, EncryptionAndDecryption crypto, String key)
@@ -61,9 +66,10 @@ public class FileUtil {
 
   /**
    * Decrypt the given byte array using specifications in another class
-   * @param bytes the given byte array
+   *
+   * @param bytes  the given byte array
    * @param crypto the crypto method specified
-   * @param key a password
+   * @param key    a password
    * @throws Exception
    */
   public void decrypt(byte[] bytes, EncryptionAndDecryption crypto, String key) throws Exception {
@@ -79,6 +85,7 @@ public class FileUtil {
 
   /**
    * A private helper method that formats the file extension
+   *
    * @param encryptedFilename file name given
    * @return a formatted file name with the correct extension
    */
@@ -98,20 +105,19 @@ public class FileUtil {
 
   /**
    * A private helper method that formats the key to 16 bytes long
+   *
    * @param key the given key
    * @return a formatted key that is 16 bytes in length
    */
-  private String formatKey(String key){
+  private String formatKey(String key) {
     byte[] keyBytes = key.getBytes();
-    if (keyBytes.length == 16){
+    if (keyBytes.length == 16) {
       return key;
-    }
-    else if (keyBytes.length < 16){
+    } else if (keyBytes.length < 16) {
       byte[] ret = new byte[(16 - keyBytes.length) + keyBytes.length];
       System.arraycopy(keyBytes, 0, ret, 0, keyBytes.length);
       return new String(ret);
-    }
-    else {
+    } else {
       byte[] ret = new byte[16];
       System.arraycopy(keyBytes, 0, ret, 0, 16);
       return new String(ret);

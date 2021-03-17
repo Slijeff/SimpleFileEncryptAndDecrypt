@@ -4,6 +4,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * A default crypto class that defines the encryption/decryption
+ *
  * @author Jeffrey
  */
 public class DefaultCrypto implements EncryptionAndDecryption {
@@ -24,8 +25,7 @@ public class DefaultCrypto implements EncryptionAndDecryption {
     Cipher cipher = Cipher.getInstance(encryptAlgo);
     cipher.init(Cipher.ENCRYPT_MODE, encryptedKey);
 
-    byte[] output = cipher.doFinal(bytes);
-    return output;
+    return cipher.doFinal(bytes);
 
   }
 
@@ -41,7 +41,6 @@ public class DefaultCrypto implements EncryptionAndDecryption {
     Cipher cipher = Cipher.getInstance(encryptAlgo);
     cipher.init(Cipher.DECRYPT_MODE, encryptedKey);
 
-    byte[] output = cipher.doFinal(bytes);
-    return output;
+    return cipher.doFinal(bytes);
   }
 }
