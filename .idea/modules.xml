@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PlayingWithFiles.iml" filepath="$PROJECT_DIR$/PlayingWithFiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleEncrypAndDecrypt.iml" filepath="$PROJECT_DIR$/SimpleEncrypAndDecrypt.iml" />
     </modules>
   </component>
 </project>
