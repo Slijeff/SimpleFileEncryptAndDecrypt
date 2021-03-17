@@ -1,5 +1,5 @@
 # SimpleFileEncryptAndDecrypt
-A Simple utility that encrypts &amp; decrypts files with a given password
+The default encryption method uses Advanced Encryption Standard (AES) algorithm. Learn more at https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
 
 ## How to Use
 1. Make sure you've installed the **Java Runtime Environment (JRE)**, you can find the instruction here: https://www.oracle.com/java/technologies/javase-jre8-downloads.html
